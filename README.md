@@ -1,5 +1,5 @@
 # Stock-Fund-comparison
-The program outputs some decriptive statitsics and performance data as well as pricing charts for selected funds
+The program outputs some decriptive statistics and performance data as well as pricing charts for selected funds
 
 on the excel sheet
 
