@@ -1,4 +1,4 @@
-# Stock-Fund-comparison
+# Stock Price Analyzer
 The program outputs some decriptive statistics and performance data as well as pricing charts for selected stocks, with the time window consisting of a user-selected start date to the current date
 
 **The output csv contains:**<ul>
