@@ -4,8 +4,7 @@
 startdate = "2017-05-01" 
 #end date is today
 funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","SCHP","SCHC","GLD"]
-#funds = ["SLV","GLD","PLT"]
-outfolder = "C:\\Users\\smaci\\Documents\\GitHub\\Stock_fund_Comparison\\Stock-Fund-comparison\\"
+outfolder = "C:\\Users\\smaci\\Documents\\GitHubStock-Fund-comparison\\"
 
 ###DO NOT NEED TO CHANGE BELOW HERE
 import pandas as pd
