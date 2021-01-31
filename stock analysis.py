@@ -1,11 +1,12 @@
-##JUST update the funds, startdate, and outpath
-##make sure to create the absolute and relative plots folders
+##JUST update the funds, and start date, output is generated in current directory
+
+#for testing
+#os.chdir("C:\\Users\\smaci\\Documents\\GitHub\\Stock-Fund-comparison")
 
 startdate = "2017-05-01" 
 #end date is today
-funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","SCHP","SCHC","GLD"]
-#funds = ["SLV","GLD","PLT"]
-outfolder = "C:\\Users\\smaci\\Documents\\GitHub\\Stock_fund_Comparison\\Stock-Fund-comparison\\"
+funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","VT","SCHP","SCHC","GLD","FDKVX"]
+#funds = ["SCHB","SCHZ","SCHF","SCHE","FXAIX","FTIHX","FXNAX","FDKVX"]
 
 ###DO NOT NEED TO CHANGE BELOW HERE
 import pandas as pd
@@ -16,8 +17,11 @@ import statistics as stats
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import datetime
+import os
 
-outpath = outfolder + "data.csv"
+outfolder = os.getcwd()
+
+outpath = outfolder + "\\data.csv"
 null = ["",""]
 null = pd.DataFrame(null).transpose() #for spaces in output
 n = len(funds)
@@ -145,6 +149,7 @@ extremes.to_csv(outpath,mode="a",header=False)
 name = yf.Ticker("SCHB")
 grow = name.history(start = startdate)
 date = grow.index
+os.mkdir("relative_plots")
 for i in range(0,n):
     plt.plot(date,growthscale.iloc[:,i])
     title = funds[i]
@@ -155,9 +160,10 @@ for i in range(0,n):
     fig.set_size_inches(18.5, 10.5)
     plt.ylim([0,1])
     plt.grid(True)
-    plt.savefig(outfolder+"relative_plots\\"+funds[i]+"_rel.png")
+    plt.savefig(outfolder+"\\relative_plots\\"+funds[i]+"_rel.png")
     plt.close()
     
+os.mkdir("absolute_plots")
 for i in range(0,n):
     plt.plot(date,growth.iloc[:,i])
     title = funds[i]
@@ -166,5 +172,5 @@ for i in range(0,n):
     fig = plt.gcf()
     fig.set_size_inches(18.5, 10.5)
     plt.grid(True)
-    plt.savefig(outfolder+"absolute_plots\\"+funds[i]+"_abs.png")
+    plt.savefig(outfolder+"\\absolute_plots\\"+"_"+funds[i]+"_abs.png")
     plt.close()
