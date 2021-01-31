@@ -5,8 +5,6 @@
 
 startdate = "2017-05-01" 
 #end date is today
-#funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","VT","SCHP","SCHC","GLD","FDKVX"]
-#funds = ["SCHB","SCHZ","SCHF","SCHE","FXAIX","FTIHX","FXNAX","FDKVX"]
 funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","SCHP","SCHC","GLD"]
 
 
