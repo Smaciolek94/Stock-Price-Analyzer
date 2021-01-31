@@ -5,13 +5,10 @@
 
 startdate = "2017-05-01" 
 #end date is today
-<<<<<<< HEAD
-funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","VT","SCHP","SCHC","GLD","FDKVX"]
+#funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","VT","SCHP","SCHC","GLD","FDKVX"]
 #funds = ["SCHB","SCHZ","SCHF","SCHE","FXAIX","FTIHX","FXNAX","FDKVX"]
-=======
 funds = ["SCHB","QQQ","SCHZ","SCHF","SCHE","SCHH","SCHA","SCHP","SCHC","GLD"]
-outfolder = "C:\\Users\\smaci\\Documents\\GitHubStock-Fund-comparison\\"
->>>>>>> d8adb0ded8c5b73c8dc3e3a0a94f6ae7dcfac948
+
 
 ###DO NOT NEED TO CHANGE BELOW HERE
 import pandas as pd
